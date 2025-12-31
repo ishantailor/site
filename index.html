@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NS-3 Installation Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111827;
+      padding: 30px 20px;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: #ffffff;
+    }
+
+    header {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 25px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      color: #374151;
+      margin-bottom: 4px;
+    }
+
+    .enroll {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #111827;
+      margin-top: 8px;
+    }
+
+    .step {
+      margin-bottom: 45px;
+      padding-bottom: 35px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .step h2 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .step p {
+      color: #1f2937;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin-left: 22px;
+      margin-top: 10px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .box {
+      background: #f9fafb;
+      border-left: 5px solid #111827;
+      padding: 16px;
+      margin: 18px 0;
+      font-size: 0.95rem;
+    }
+
+    .note {
+      background: #fffbeb;
+      border-left-color: #ca8a04;
+    }
+
+    .code {
+      background: #f3f4f6;
+      color: #111827;
+      padding: 16px;
+      border-radius: 6px;
+      font-family: Consolas, monospace;
+      font-size: 0.95rem;
+      margin: 15px 0;
+      overflow-x: auto;
+      border: 1px solid #e5e7eb;
+    }
+
+    .img {
+      display: block;
+      width: 100%;
+      max-width: 620px;
+      margin: 20px auto;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 2px solid #e5e7eb;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    footer a {
+      color: #111827;
+      text-decoration: underline;
+    }
+
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>NS-3 Installation Guide</h1>
+    <p>Step-by-Step Installation of Ubuntu and NS-3 using Oracle VirtualBox</p>
+    <div class="enroll">Enrollment Number: <strong>25PGCE027</strong></div>
+  </header>
+
+  <section class="step">
+    <h2>Step 1: Install Oracle VM VirtualBox</h2>
+    <p>
+      Oracle VM VirtualBox is a virtualization software that allows us to install
+      and run Ubuntu Linux inside our existing operating system.
+    </p>
+    <div class="box">
+      <strong>Download Link:</strong><br>
+      https://www.virtualbox.org
+    </div>
+    <ul>
+      <li>Download VirtualBox for your operating system</li>
+      <li>Run the installer as administrator</li>
+      <li>Keep default installation settings</li>
+      <li>Allow network permissions if prompted</li>
+    </ul>
+    <img class="img" src="1.jpeg">
+  </section>
+
+  <section class="step">
+    <h2>Step 2: Download Ubuntu Desktop ISO</h2>
+    <p>
+      Ubuntu is a Linux-based operating system officially supported by NS-3.
+    </p>
+    <div class="box">
+      <strong>Official Website:</strong><br>
+      https://ubuntu.com/download/desktop
+    </div>
+    <ul>
+      <li>Download Ubuntu Desktop (LTS recommended)</li>
+      <li>File size will be approximately 4–5 GB</li>
+      <li>Ensure sufficient disk space</li>
+    </ul>
+    <img class="img" src="5.jpeg">
+  </section>
+
+  <section class="step">
+    <h2>Step 3: Create Ubuntu Virtual Machine</h2>
+    <p>
+      A new virtual machine must be created inside VirtualBox to install Ubuntu.
+    </p>
+    <div class="box">
+      <strong>Recommended Configuration:</strong>
+      <ul>
+        <li>RAM: 4–8 GB</li>
+        <li>CPU: 2–4 cores</li>
+        <li>Disk: 80–100 GB (Dynamically Allocated)</li>
+      </ul>
+    </div>
+    <ul>
+      <li>Click <strong>New</strong> in VirtualBox</li>
+      <li>Name the VM as <strong>Ubuntu NS3</strong></li>
+      <li>Select Type: Linux | Version: Ubuntu (64-bit)</li>
+      <li>Attach the Ubuntu ISO file</li>
+    </ul>
+    <img class="img" src="3.jpeg">
+  </section>
+
+  <section class="step">
+    <h2>Step 4: Install Ubuntu Operating System</h2>
+    <p>
+      Start the virtual machine and follow the Ubuntu installation wizard.
+    </p>
+    <ul>
+      <li>Select language and keyboard layout</li>
+      <li>Choose Normal Installation</li>
+      <li>Create username and password</li>
+      <li>Wait for installation to complete and restart</li>
+    </ul>
+  </section>
+
+  <section class="step">
+    <h2>Step 5: Update Ubuntu System</h2>
+    <p>Updating the system ensures all packages are up to date.</p>
+    <div class="code">
+sudo apt update && sudo apt upgrade -y
+    </div>
+  </section>
+
+  <section class="step">
+    <h2>Step 6: Install NS-3 (Only 3 Commands)</h2>
+    <p>
+      NS-3 is installed using the official Git repository.
+      Only three commands are required.
+    </p>
+    <div class="code">
+git clone https://gitlab.com/nsnam/ns-3-dev.git
+cd ns-3-dev
+./ns3 configure && ./ns3 build
+    </div>
+    <div class="box note">
+      The build process may take several minutes depending on system configuration.
+    </div>
+    <img class="img" src="7.jpeg">
+  </section>
+
+  <section class="step">
+    <h2>Step 7: Verify NS-3 Installation</h2>
+    <p>Run a sample program to verify the installation.</p>
+    <div class="code">
+./ns3 run hello-simulator
+    </div>
+    <div class="box">
+      If the output displays <strong>Hello Simulator</strong>,
+      NS-3 has been installed successfully.
+    </div>
+  </section>
+
+  <!-- <footer>
+    <p>NS-3 Installation Guide | Academic Use</p>
+    <p>Reference: <a href="https://www.nsnam.org" target="_blank">https://www.nsnam.org</a></p>
+  </footer> -->
+
+</div>
+
+</body>
+</html>
